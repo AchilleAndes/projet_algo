@@ -287,6 +287,8 @@ if variable == 'Temperature' or variable == 'temperature' or variable == 'Tempé
     plt.subplot(321)
     plt.plot(sent_at1, temperature1, label='capteur 1')
     plt.text(start_date,min(temperature1[s1:e1+1]),max(temperature1[s1:e1+1]))
+    plt.xlim(start_date,end_date)
+    plt.legend()
     plt.subplot(322)
     plt.plot(sent_at2, temperature2, label='capteur 2')
     plt.subplot(323)
