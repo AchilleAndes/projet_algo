@@ -24,3 +24,4 @@ print (objetcsv)
 # for row in objetcsv:
 #     lst.append(row)
 # lst = list(objetcsv)
+test
