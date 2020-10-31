@@ -14,29 +14,29 @@ def min(liste):
     for i in range (1,len(liste)):
         if a>liste[i]:
             a = liste[i]
-    return 'min=',a
+    return a
 
 def max(liste):
     a = liste[0]
     for i in range (1,len(liste)):
         if a<liste[i]:
             a = liste[i]
-    return 'max=',a
+    return a
 
 def moyenne(liste):
     a = 0
     for i in range (len(liste)):
         a+=liste[i]
-    return 'moy=',a/len(liste)
+    return a/len(liste)
 
 def ecartType(liste):
     a = 0
     for i in range(len(liste)):
         a+=(liste[i]-moyenne(liste))**2
-    return 'ET=',(a/len(liste))**(1/2)
+    return (a/len(liste))**(1/2)
 
 def mediane(liste):
-    return 'med=',statistics.median(liste)
+    return statistics.median(liste)
 
 def coefCorr(liste1,liste2):
     return np.corrcoef(liste1,liste2)[0][1]
@@ -295,10 +295,7 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     med=str(mediane(temperature1))
     min=str(min(temperature1))
     max=str(max(temperature1))
-    plt.text(start_date,27.8, moyenne(temperature1), fontsize=7)
-    plt.text(start_date,27.1, med, fontsize=7)
-    plt.text(start_date,26.4, max, fontsize=7)
-    plt.text(start_date,25.8, min, fontsize=7)
+    plt.text(start_date,27.8, u"moy = %f"%(moyenne(temperature1)), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.legend()
     plt.subplot(322)
