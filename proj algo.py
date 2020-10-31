@@ -291,7 +291,6 @@ plt.clf()
 if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Température' or variable1 == 'température':
     plt.subplot(321)
     plt.plot(sent_at1, temperature1, label='tem 1')
-    plt.text(start_date,min(temperature1[s1:e1+1]),max(temperature1[s1:e1+1]))
     plt.xlim(start_date,end_date)
     plt.legend()
     plt.subplot(322)
@@ -453,7 +452,6 @@ if variable2 != None :
     if variable2 == 'Temperature' or variable2 == 'temperature' or variable2 == 'Température' or variable2 == 'température':
         plt.subplot(321)
         plt.plot(sent_at1, temperature1, label='tem 1')
-        plt.text(start_date,min(temperature1[s1:e1+1]),max(temperature1[s1:e1+1]))
         plt.xlim(start_date,end_date)
         plt.legend()
         plt.subplot(322)
