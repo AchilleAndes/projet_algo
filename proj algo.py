@@ -14,29 +14,29 @@ def min(liste):
     for i in range (1,len(liste)):
         if a>liste[i]:
             a = liste[i]
-    return a
+    return 'min=',a
 
 def max(liste):
     a = liste[0]
     for i in range (1,len(liste)):
         if a<liste[i]:
             a = liste[i]
-    return a
+    return 'max=',a
 
 def moyenne(liste):
     a = 0
     for i in range (len(liste)):
         a+=liste[i]
-    return a/len(liste)
+    return 'moy=',a/len(liste)
 
 def ecartType(liste):
     a = 0
     for i in range(len(liste)):
         a+=(liste[i]-moyenne(liste))**2
-    return (a/len(liste))**(1/2)
+    return 'ET=',(a/len(liste))**(1/2)
 
 def mediane(liste):
-    return statistics.median(liste)
+    return 'med=',statistics.median(liste)
 
 def coefCorr(liste1,liste2):
     return np.corrcoef(liste1,liste2)[0][1]
