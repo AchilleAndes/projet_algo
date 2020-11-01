@@ -5,13 +5,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statistics
 from math import *
-doc = pd.read_csv(r"C:\Users\squin\OneDrive\Documents\GitHub\projet_algo\EIVP_KM.csv", sep = ";", header = None)
+doc = pd.read_csv(r"C:\Users\aachi\Desktop\projet_algo\EIVP_KM.csv", sep = ";", header = None)
 
 ##fonctions valeurs statistique
 
 def min(liste):
     if len(liste)==1 or len(liste)==0:
-        return None
+        return 0
     a = liste[0]
     for i in range (1,len(liste)):
         if a>liste[i]:
@@ -20,7 +20,7 @@ def min(liste):
 
 def max(liste):
     if len(liste)==1 or len(liste)==0:
-        return None
+        return 0
     a = liste[0]
     for i in range (1,len(liste)):
         if a<liste[i]:
@@ -37,7 +37,7 @@ def moyenne(liste):
 
 def ecartType(liste):
     if len(liste)==1 or len(liste)==0:
-        return None
+        return 0
     a = 0
     for i in range(len(liste)):
         a+=(liste[i]-moyenne(liste))**2
@@ -45,12 +45,12 @@ def ecartType(liste):
 
 def mediane(liste):
     if len(liste)==1 or len(liste)==0:
-        return None
+        return 0
     return statistics.median(liste)
 
 def coefCorr(liste1,liste2):
     if len(liste1)==1 or len(liste2)==1 or len(liste1)==0 or len(liste2)==0:
-        return None
+        return 0
     return np.corrcoef(liste1,liste2)[0][1]
 
 ## calcul humidex
