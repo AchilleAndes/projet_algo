@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from math import *
 import statistics
-doc = pd.read_csv(r"C:\Users\aachi\Desktop\projet_algo\EIVP_KM.csv", sep = ";", header = None)
+doc = pd.read_csv(r"C:\Users\squin\OneDrive\Documents\GitHub\projet_algo\EIVP_KM.csv", sep = ";", header = None)
 
 ##fonctions valeurs statistique
 
