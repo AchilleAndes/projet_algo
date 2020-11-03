@@ -267,6 +267,7 @@ if variable2 != None :
         var25 = humidex5
         var26 = humidex6
 
+
 ## encadrement pour les valeurs statistiques
 
 #indices laps de temps capteur 1
@@ -384,18 +385,20 @@ else :
     e6 = -1
 
 ##tracé de la courbe
-
+#ax_var_capt
 plt.clf()
 if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Température' or variable1 == 'température':
+    ax11 = plt.subplot(321)
     plt.subplot(321)
-    plt.plot(sent_at1, temperature1, label='tem 1')
+    ax11.plot(sent_at1, temperature1, label='tem 1', color = 'tab:red')
+    ax11.tick_params(axis='y',  labelcolor = 'tab:red')
     plt.text(start_date, max(var11), u"min temp = %f"%(min(temperature1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 12*(max(var11)-min(var11))/13 + min(var11), u"max temp = %f"%(max(temperature1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 11*(max(var11)-min(var11))/13 + min(var11), u"moy temp = %f"%(moyenne(temperature1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 10*(max(var11)-min(var11))/13 + min(var11), u"med temp = %f"%(mediane(temperature1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 9*(max(var11)-min(var11))/13 + min(var11), u"EcTyp temp = %f"%(ecartType(temperature1[s1:e1+1])), fontsize=7)
     plt.xlim(start_date,end_date)
-    plt.legend()
+    plt.legend(bbox_to_anchor =(1, 1), ncol = 2)
     plt.subplot(322)
     plt.plot(sent_at2, temperature2, label='tem 2')
     plt.text(start_date, max(var12), u"min temp = %f"%(min(temperature2[s2:e2+1])), fontsize=7)
@@ -725,6 +728,12 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
 else :
     print ("erreur d'entrée de variable1")
 
+ax21 = ax11.twinx()
+# ax22 = ax12.twinx()
+# ax23 = ax13.twinx()
+# ax24 = ax14.twinx()
+# ax25 = ax15.twinx()
+# ax26 = ax16.twinx()
 
 if variable2 != None :
     if variable2 == 'Temperature' or variable2 == 'temperature' or variable2 == 'Température' or variable2 == 'température':
@@ -790,16 +799,16 @@ if variable2 != None :
         plt.legend()
         plt.show()
     elif variable2 == 'bruit' or variable2 == 'Bruit':
-        plt.subplot(321)
-        plt.plot(sent_at1, noise1, label='bruit 1')
-        plt.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min noise = %f"%(min(noise1[s1:e1+1])), fontsize=7)
-        plt.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max noise = %f"%(max(noise1[s1:e1+1])), fontsize=7)
-        plt.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy noise = %f"%(moyenne(noise1[s1:e1+1])), fontsize=7)
-        plt.text(start_date, 4*(max(var11)-min(var11))/13 + min(var11), u"med noise = %f"%(mediane(noise1[s1:e1+1])), fontsize=7)
-        plt.text(start_date, 3*(max(var11)-min(var11))/13 + min(var11), u"EcTyp noise = %f"%(ecartType(noise1[s1:e1+1])), fontsize=7)
-        plt.text(start_date, (max(var11)-min(var11))/13 + min(var11), u"coef corr = %f"%coefCorr(var11[s1:e1+1],var21[s1:e1+1]), fontsize=7)
+        ax21.plot(sent_at1, noise1, label='bruit 1', color = 'tab:green')
+        ax21.tick_params(axis='y', labelcolor = 'tab:green')
+        ax11.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min noise = %f"%(min(noise1[s1:e1+1])), fontsize=7)
+        ax11.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max noise = %f"%(max(noise1[s1:e1+1])), fontsize=7)
+        ax11.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy noise = %f"%(moyenne(noise1[s1:e1+1])), fontsize=7)
+        ax11.text(start_date, 4*(max(var11)-min(var11))/13 + min(var11), u"med noise = %f"%(mediane(noise1[s1:e1+1])), fontsize=7)
+        ax11.text(start_date, 3*(max(var11)-min(var11))/13 + min(var11), u"EcTyp noise = %f"%(ecartType(noise1[s1:e1+1])), fontsize=7)
+        ax11.text(start_date, (max(var11)-min(var11))/13 + min(var11), u"coef corr = %f"%coefCorr(var11[s1:e1+1],var21[s1:e1+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.legend()
+        plt.legend(bbox_to_anchor =(0.5, 1), ncol = 2)
         plt.subplot(322)
         plt.plot(sent_at2, noise2, label='bruit 2')
         plt.text(start_date, 7*(max(var12)-min(var12))/13 + min(var12), u"min noise = %f"%(min(noise2[s2:e2+1])), fontsize=7)
