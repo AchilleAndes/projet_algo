@@ -48,7 +48,7 @@ def tri(liste):
     for i in range(1,n):
         temp=liste[i]
         j=i-1
-        while   j >=0 and liste[j] > temp:
+        while j >= 0 and liste[j] > temp:
             liste[j+1]=liste[j]
             j-=1
         liste[j+1]=temp
@@ -65,7 +65,7 @@ def mediane(liste):
         else:
             med=(l[n//2]+l[(n//2)-1])/2
     return med
-    
+
 def cov(liste1,liste2):
     n=len(liste1)
     cov=0
