@@ -43,15 +43,47 @@ def ecartType(liste):
         a+=(liste[i]-moyenne(liste))**2
     return (a/len(liste))**(1/2)
 
+def tri(liste):
+    n=len(liste)
+    for i in range(1,n):
+        temp=liste[i]
+        j=i-1
+        while   j >=0 and liste[j] > temp:
+            liste[j+1]=liste[j]
+            j-=1
+        liste[j+1]=temp
+    return liste
+
 def mediane(liste):
+    n=len(liste)
+    l=tri(liste)
     if len(liste)==1 or len(liste)==0:
         return 0
-    return statistics.median(liste)
+    else:
+        if n%2!=0:
+            med=l[n//2]
+        else:
+            med=(l[n//2]+l[(n//2)-1])/2
+    return med
+    
+def cov(liste1,liste2):
+    n=len(liste1)
+    cov=0
+    x=0
+    y=0
+    for i in range(n):
+        cov=cov+(liste1[i]*liste2[i])
+        x=x+liste1[i]
+        y=y+liste2[i]
+    c=cov/n-((x/n)*(y/n))
+    return c
 
-def coefCorr(liste1,liste2):
+def coefcorr(liste1,liste2):
+    cc=cov(liste1,liste2)/(ecartType(liste1)*ecartType(liste2))
     if len(liste1)==1 or len(liste2)==1 or len(liste1)==0 or len(liste2)==0:
-        return 0
-    return np.corrcoef(liste1,liste2)[0][1]
+        return O
+    else:
+        return cc
 
 ## calcul humidex
 
