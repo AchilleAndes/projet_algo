@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statistics
 from math import *
-doc = pd.read_csv(r"C:\Users\aachi\Desktop\projet_algo\EIVP_KM.csv", sep = ";", header = None)
+doc = pd.read_csv(r"C:\Users\aachi\Desktop\projet_algo\post-32566-EIVP_KM.csv", sep = ";", header = None)
 
 ##fonctions valeurs statistique
 
@@ -148,54 +148,54 @@ sent_at6 = []
 
 
 for i in range (1,len(doc)):
-    if int(doc[0][i])==1:
-        noise1.append(float(doc[1][i]))
-        temperature1.append(float(doc[2][i]))
-        humidity1.append(float(doc[3][i]))
-        lum1.append(float(doc[4][i]))
-        co21.append(float(doc[5][i]))
-        humidex1.append(humidex(float(doc[2][i]),float(doc[3][i])))
-        sent_at1.append(datetime.datetime(int(doc[6][i][0:4]),int(doc[6][i][5:7]),int(doc[6][i][8:10]),int(doc[6][i][11:13]),int(doc[6][i][14:16]),int(doc[6][i][17:19])))
-    elif int(doc[0][i])==2:
-        noise2.append(float(doc[1][i]))
-        temperature2.append(float(doc[2][i]))
-        humidity2.append(float(doc[3][i]))
-        lum2.append(float(doc[4][i]))
-        co22.append(float(doc[5][i]))
-        humidex2.append(humidex(float(doc[2][i]),float(doc[3][i])))
-        sent_at2.append(datetime.datetime(int(doc[6][i][0:4]),int(doc[6][i][5:7]),int(doc[6][i][8:10]),int(doc[6][i][11:13]),int(doc[6][i][14:16]),int(doc[6][i][17:19])))
-    elif int(doc[0][i])==3:
-        noise3.append(float(doc[1][i]))
-        temperature3.append(float((doc[2][i])))
-        humidity3.append(float(doc[3][i]))
-        lum3.append(float(doc[4][i]))
-        co23.append(float(doc[5][i]))
-        humidex3.append(humidex(float(doc[2][i]),float(doc[3][i])))
-        sent_at3.append(datetime.datetime(int(doc[6][i][0:4]),int(doc[6][i][5:7]),int(doc[6][i][8:10]),int(doc[6][i][11:13]),int(doc[6][i][14:16]),int(doc[6][i][17:19])))
-    elif int(doc[0][i])==4:
-        noise4.append(float(doc[1][i]))
-        temperature4.append(float(doc[2][i]))
-        humidity4.append(float(doc[3][i]))
-        lum4.append(float(doc[4][i]))
-        co24.append(float(doc[5][i]))
-        humidex4.append(humidex(float(doc[2][i]),float(doc[3][i])))
-        sent_at4.append(datetime.datetime(int(doc[6][i][0:4]),int(doc[6][i][5:7]),int(doc[6][i][8:10]),int(doc[6][i][11:13]),int(doc[6][i][14:16]),int(doc[6][i][17:19])))
-    elif int(doc[0][i])==5:
-        noise5.append(float(doc[1][i]))
-        temperature5.append(float((doc[2][i])))
-        humidity5.append(float(doc[3][i]))
-        lum5.append(float(doc[4][i]))
-        co25.append(float(doc[5][i]))
-        humidex5.append(humidex(float(doc[2][i]),float(doc[3][i])))
-        sent_at5.append(datetime.datetime(int(doc[6][i][0:4]),int(doc[6][i][5:7]),int(doc[6][i][8:10]),int(doc[6][i][11:13]),int(doc[6][i][14:16]),int(doc[6][i][17:19])))
-    elif int(doc[0][i])==6:
-        noise6.append(float(doc[1][i]))
-        temperature6.append(float(doc[2][i]))
-        humidity6.append(float(doc[3][i]))
-        lum6.append(float(doc[4][i]))
-        co26.append(float(doc[5][i]))
-        humidex6.append(humidex(float(doc[2][i]),float(doc[3][i])))
-        sent_at6.append(datetime.datetime(int(doc[6][i][0:4]),int(doc[6][i][5:7]),int(doc[6][i][8:10]),int(doc[6][i][11:13]),int(doc[6][i][14:16]),int(doc[6][i][17:19])))
+    if int(doc[1][i])==1:
+        noise1.append(float(doc[2][i]))
+        temperature1.append(float(doc[3][i]))
+        humidity1.append(float(doc[4][i]))
+        lum1.append(float(doc[5][i]))
+        co21.append(float(doc[6][i]))
+        humidex1.append(humidex(float(doc[3][i]),float(doc[4][i])))
+        sent_at1.append(datetime.datetime(int(doc[7][i][0:4]),int(doc[7][i][5:7]),int(doc[7][i][8:10]),int(doc[7][i][11:13]),int(doc[7][i][14:16]),int(doc[7][i][17:19])))
+    elif int(doc[1][i])==2:
+        noise2.append(float(doc[2][i]))
+        temperature2.append(float(doc[3][i]))
+        humidity2.append(float(doc[4][i]))
+        lum2.append(float(doc[5][i]))
+        co22.append(float(doc[6][i]))
+        humidex2.append(humidex(float(doc[3][i]),float(doc[4][i])))
+        sent_at2.append(datetime.datetime(int(doc[7][i][0:4]),int(doc[7][i][5:7]),int(doc[7][i][8:10]),int(doc[7][i][11:13]),int(doc[7][i][14:16]),int(doc[7][i][17:19])))
+    elif int(doc[1][i])==3:
+        noise3.append(float(doc[2][i]))
+        temperature3.append(float((doc[3][i])))
+        humidity3.append(float(doc[4][i]))
+        lum3.append(float(doc[5][i]))
+        co23.append(float(doc[6][i]))
+        humidex3.append(humidex(float(doc[3][i]),float(doc[4][i])))
+        sent_at3.append(datetime.datetime(int(doc[7][i][0:4]),int(doc[7][i][5:7]),int(doc[7][i][8:10]),int(doc[7][i][11:13]),int(doc[7][i][14:16]),int(doc[7][i][17:19])))
+    elif int(doc[1][i])==4:
+        noise4.append(float(doc[2][i]))
+        temperature4.append(float(doc[3][i]))
+        humidity4.append(float(doc[4][i]))
+        lum4.append(float(doc[5][i]))
+        co24.append(float(doc[6][i]))
+        humidex4.append(humidex(float(doc[3][i]),float(doc[4][i])))
+        sent_at4.append(datetime.datetime(int(doc[7][i][0:4]),int(doc[7][i][5:7]),int(doc[7][i][8:10]),int(doc[7][i][11:13]),int(doc[7][i][14:16]),int(doc[7][i][17:19])))
+    elif int(doc[1][i])==5:
+        noise5.append(float(doc[2][i]))
+        temperature5.append(float((doc[3][i])))
+        humidity5.append(float(doc[4][i]))
+        lum5.append(float(doc[5][i]))
+        co25.append(float(doc[6][i]))
+        humidex5.append(humidex(float(doc[3][i]),float(doc[4][i])))
+        sent_at5.append(datetime.datetime(int(doc[7][i][0:4]),int(doc[7][i][5:7]),int(doc[7][i][8:10]),int(doc[7][i][11:13]),int(doc[7][i][14:16]),int(doc[7][i][17:19])))
+    elif int(doc[1][i])==6:
+        noise6.append(float(doc[2][i]))
+        temperature6.append(float(doc[3][i]))
+        humidity6.append(float(doc[4][i]))
+        lum6.append(float(doc[5][i]))
+        co26.append(float(doc[6][i]))
+        humidex6.append(humidex(float(doc[3][i]),float(doc[4][i])))
+        sent_at6.append(datetime.datetime(int(doc[7][i][0:4]),int(doc[7][i][5:7]),int(doc[7][i][8:10]),int(doc[7][i][11:13]),int(doc[7][i][14:16]),int(doc[7][i][17:19])))
 
 
 ## inputs
