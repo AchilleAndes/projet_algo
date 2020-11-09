@@ -1266,4 +1266,9 @@ if variable2 != None :
     else :
         print ("erreur d'entrée de variable2")
 
-
+print(u"capteur 1 : coefficient de corrélation = %f"%coefCorr(var11[s1:e1+1],var21[s1:e1+1]))
+print(u"capteur 2 : coefficient de corrélation = %f"%coefCorr(var12[s2:e2+1],var22[s2:e2+1]))
+print(u"capteur 3 : coefficient de corrélation = %f"%coefCorr(var13[s3:e3+1],var23[s3:e3+1]))
+print(u"capteur 4 : coefficient de corrélation = %f"%coefCorr(var14[s4:e4+1],var24[s4:e4+1]))
+print(u"capteur 5 : coefficient de corrélation = %f"%coefCorr(var15[s5:e5+1],var25[s5:e5+1]))
+print(u"capteur 6 : coefficient de corrélation = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]))
