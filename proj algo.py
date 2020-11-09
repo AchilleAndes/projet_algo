@@ -1260,7 +1260,6 @@ if variable2 != None :
     else :
         print ("erreur d'entrée de variable2")
     
-        
-##
+
 print(idenAnom([temperature1,temperature2,temperature3,temperature4,temperature5,temperature6]))
 
