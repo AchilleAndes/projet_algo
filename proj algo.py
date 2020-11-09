@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statistics
 from math import *
-doc = pd.read_csv(r"C:\Users\aachi\Desktop\projet_algo\post-32566-EIVP_KM.csv", sep = ";", header = None)
+doc = pd.read_csv(r"C:\Users\squin\OneDrive\Documents\GitHub\projet_algo\post-32566-EIVP_KM.csv", sep = ";", header = None)
 
 ##fonctions valeurs statistique
 
@@ -67,10 +67,13 @@ def mediane(liste):
     return med
 
 def cov(liste1,liste2):
-    n=len(liste1)
-    cov=0
-    x=0
-    y=0
+    if len(liste1)==1 or len(liste2)==1 or len(liste1)==0 or len(liste2)==0:
+        return 0
+    else:
+        n=len(liste1)
+        cov=0
+        x=0
+        y=0
     for i in range(n):
         cov=cov+(liste1[i]*liste2[i])
         x=x+liste1[i]
@@ -1262,3 +1265,7 @@ if variable2 != None :
         plt.show()
     else :
         print ("erreur d'entrée de variable2")
+    
+
+print(idenAnom([temperature1,temperature2,temperature3,temperature4,temperature5,temperature6]))
+
