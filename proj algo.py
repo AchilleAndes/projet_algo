@@ -85,47 +85,53 @@ def coefCorr(liste1,liste2):
     else:
         return cc
 
-def scinde(liste):
-    l1 = []
-    l2 = []
-    l3 = []
-    l4 = []
-    l5 = []
-    l6 = []
-    for i in range(len(liste)):
-        if liste[i][0] == 1:
-            l1.append(liste[i][1])
-        elif liste[i][0] == 2:
-            l2.append(liste[i][1])
-        elif liste[i][0] == 3:
-            l3.append(liste[i][1])
-        elif liste[i][0] == 4:
-            l4.append(liste[i][1])
-        elif liste[i][0] == 5:
-            l5.append(liste[i][1])
-        elif liste[i][0] == 6:
-            l6.append(liste[i][1])
-    return [l1,l2,l3,l4,l5,l6]
+# def scinde(liste):
+#     l1 = []
+#     l2 = []
+#     l3 = []
+#     l4 = []
+#     l5 = []
+#     l6 = []
+#     for i in range(len(liste)):
+#         if liste[i][0] == 1:
+#             l1.append(liste[i][1])
+#         elif liste[i][0] == 2:
+#             l2.append(liste[i][1])
+#         elif liste[i][0] == 3:
+#             l3.append(liste[i][1])
+#         elif liste[i][0] == 4:
+#             l4.append(liste[i][1])
+#         elif liste[i][0] == 5:
+#             l5.append(liste[i][1])
+#         elif liste[i][0] == 6:
+#             l6.append(liste[i][1])
+#     return [l1,l2,l3,l4,l5,l6]
+#
+# def idenAnom(liste):
+#     l = []
+#     for i in range(6):                      #num capteur
+#         for j in range(min([len(liste[0]),len(liste[1]),len(liste[2]),len(liste[3]),len(liste[4]),len(liste[5])])):     #indice
+#             a = moyenne([liste[0][j],liste[1][j],liste[2][j],liste[3][j],liste[4][j],liste[5][j]])
+#             b = 2*ecartType([liste[0][j],liste[1][j],liste[2][j],liste[3][j],liste[4][j],liste[5][j]])
+#             if liste[i][j] <= a-b or liste[i][j] >= a+b:
+#                 l.append([i,j])
+#         l.append([i,None])
+#     return scinde(l)
+#
+# def BoolAnom(liste):
+#     l = []
+#     for i in range(len(liste)):
+#         if len(liste[i]) != 0:
+#             l.append(True)
+#         l.append(False)
+#     return l
 
-def idenAnom(liste):
+def anom(liste):    #liste de datetime
     l = []
-    for i in range(6):                      #num capteur
-        for j in range(min([len(liste[0]),len(liste[1]),len(liste[2]),len(liste[3]),len(liste[4]),len(liste[5])])):     #indice
-            a = moyenne([liste[0][j],liste[1][j],liste[2][j],liste[3][j],liste[4][j],liste[5][j]])
-            b = 2*ecartType([liste[0][j],liste[1][j],liste[2][j],liste[3][j],liste[4][j],liste[5][j]])
-            if liste[i][j] <= a-b or liste[i][j] >= a+b:
-                l.append([i,j])
-        l.append([i,None])
-    return scinde(l)
-
-def BoolAnom(liste):
-    l = []
-    for i in range(len(liste)):
-        if len(liste[i]) != 0:
-            l.append(True)
-        l.append(False)
+    for i in range(len(liste)-1):
+        if liste[i+1] - liste[i] > datetime.timedelta(seconds=1200):
+            l.append(i)
     return l
-
 
 
 ## calcul humidex
@@ -511,7 +517,7 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(325)
     ax15.plot(sent_at5, temperature5, label='tem 5', color = 'tab:red')
     ax15.tick_params(axis='y',  labelcolor = 'tab:red')
-    ax15.plot(sent_at5[idenAnom([temperature1,temperature2,temperature3,temperature4,temperature5,temperature6])[4][0]:idenAnom([temperature1,temperature2,temperature3,temperature4,temperature5,temperature6])[4][-2]+1], temperature5[idenAnom([temperature1,temperature2,temperature3,temperature4,temperature5,temperature6])[4][0]:idenAnom([temperature1,temperature2,temperature3,temperature4,temperature5,temperature6])[4][-2]+1], color = 'tab:purple')
+    ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], temperature5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var15), u"min temp = %f"%(min(temperature5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 12*(max(var15)-min(var15))/13 + min(var15), u"max temp = %f"%(max(temperature5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 11*(max(var15)-min(var15))/13 + min(var15), u"moy temp = %f"%(moyenne(temperature5[s5:e5+1])), fontsize=7)
