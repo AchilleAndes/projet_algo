@@ -435,7 +435,8 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(321)
     ax11.plot(sent_at1, temperature1, label='tem 1', color = 'tab:purple')
     ax11.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], temperature1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at1)) != 0 :
+        ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], temperature1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var11), u"min temp = %f"%(min(temperature1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 12*(max(var11)-min(var11))/13 + min(var11), u"max temp = %f"%(max(temperature1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 11*(max(var11)-min(var11))/13 + min(var11), u"moy temp = %f"%(moyenne(temperature1[s1:e1+1])), fontsize=7)
@@ -447,7 +448,8 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(322)
     ax12.plot(sent_at2, temperature2, label='tem 2', color = 'tab:purple')
     ax12.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], temperature2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at2)) != 0 :
+        ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], temperature2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var12), u"min temp = %f"%(min(temperature2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 12*(max(var12)-min(var12))/13 + min(var12), u"max temp = %f"%(max(temperature2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 11*(max(var12)-min(var12))/13 + min(var12), u"moy temp = %f"%(moyenne(temperature2[s2:e2+1])), fontsize=7)
@@ -459,7 +461,8 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(323)
     ax13.plot(sent_at3, temperature3, label='tem 3', color = 'tab:purple')
     ax13.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], temperature3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at3)) != 0 :
+        ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], temperature3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var13), u"min temp = %f"%(min(temperature3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 12*(max(var13)-min(var13))/13 + min(var13), u"max temp = %f"%(max(temperature3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 11*(max(var13)-min(var13))/13 + min(var13), u"moy temp = %f"%(moyenne(temperature3[s3:e3+1])), fontsize=7)
@@ -471,7 +474,8 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(324)
     ax14.plot(sent_at4, temperature4, label='tem 4', color = 'tab:purple')
     ax14.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], temperature4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at4)) != 0 :
+        ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], temperature4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var14), u"min temp = %f"%(min(temperature4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 12*(max(var14)-min(var14))/13 + min(var14), u"max temp = %f"%(max(temperature4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 11*(max(var14)-min(var14))/13 + min(var14), u"moy temp = %f"%(moyenne(temperature4[s4:e4+1])), fontsize=7)
@@ -483,7 +487,8 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(325)
     ax15.plot(sent_at5, temperature5, label='tem 5', color = 'tab:purple')
     ax15.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], temperature5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at5)) != 0 :
+        ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], temperature5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var15), u"min temp = %f"%(min(temperature5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 12*(max(var15)-min(var15))/13 + min(var15), u"max temp = %f"%(max(temperature5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 11*(max(var15)-min(var15))/13 + min(var15), u"moy temp = %f"%(moyenne(temperature5[s5:e5+1])), fontsize=7)
@@ -495,7 +500,8 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.subplot(326)
     ax16.plot(sent_at6, temperature6, label='tem 6', color = 'tab:purple')
     ax16.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], temperature6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at6)) != 0 :
+        ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], temperature6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var16), u"min temp = %f"%(min(temperature6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 12*(max(var16)-min(var16))/13 + min(var16), u"max temp = %f"%(max(temperature6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 11*(max(var16)-min(var16))/13 + min(var16), u"moy temp = %f"%(moyenne(temperature6[s6:e6+1])), fontsize=7)
@@ -589,7 +595,8 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.subplot(321)
     ax11.plot(sent_at1, humidity1, label='hum 1', color = 'tab:purple')
     ax11.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], humidity1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at1)) != 0 :
+        ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], humidity1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var11), u"min hum = %f"%(min(humidity1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 12*(max(var11)-min(var11))/13 + min(var11), u"max hum = %f"%(max(humidity1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 11*(max(var11)-min(var11))/13 + min(var11), u"moy hum = %f"%(moyenne(humidity1[s1:e1+1])), fontsize=7)
@@ -601,7 +608,8 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.subplot(322)
     ax12.plot(sent_at2, humidity2, label='hum 2', color = 'tab:purple')
     ax12.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], humidity2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at2)) != 0 :
+        ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], humidity2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var12), u"min hum = %f"%(min(humidity2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 12*(max(var12)-min(var12))/13 + min(var12), u"max hum = %f"%(max(humidity2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 11*(max(var12)-min(var12))/13 + min(var12), u"moy hum = %f"%(moyenne(humidity2[s2:e2+1])), fontsize=7)
@@ -613,7 +621,8 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.subplot(323)
     ax13.plot(sent_at3, humidity3, label='hum 3', color = 'tab:purple')
     ax13.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], humidity3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at3)) != 0 :
+        ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], humidity3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var13), u"min hum = %f"%(min(humidity3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 12*(max(var13)-min(var13))/13 + min(var13), u"max hum = %f"%(max(humidity3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 11*(max(var13)-min(var13))/13 + min(var13), u"moy hum = %f"%(moyenne(humidity3[s3:e3+1])), fontsize=7)
@@ -625,7 +634,8 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.subplot(324)
     ax14.plot(sent_at4, humidity4, label='hum 4', color = 'tab:purple')
     ax14.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], humidity4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at4)) != 0 :
+        ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], humidity4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var14), u"min hum = %f"%(min(humidity4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 12*(max(var14)-min(var14))/13 + min(var14), u"max hum = %f"%(max(humidity4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 11*(max(var14)-min(var14))/13 + min(var14), u"moy hum = %f"%(moyenne(humidity4[s4:e4+1])), fontsize=7)
@@ -637,7 +647,8 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.subplot(325)
     ax15.plot(sent_at5, humidity5, label='hum 5', color = 'tab:purple')
     ax15.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], humidity5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at5)) != 0 :
+        ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], humidity5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var15), u"min hum = %f"%(min(humidity5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 12*(max(var15)-min(var15))/13 + min(var15), u"max hum = %f"%(max(humidity5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 11*(max(var15)-min(var15))/13 + min(var15), u"moy hum = %f"%(moyenne(humidity5[s5:e5+1])), fontsize=7)
@@ -649,7 +660,8 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.subplot(326)
     ax16.plot(sent_at6, humidity6, label='hum 6', color = 'tab:purple')
     ax16.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], humidity6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at6)) != 0 :
+        ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], humidity6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var16), u"min hum = %f"%(min(humidity6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 12*(max(var16)-min(var16))/13 + min(var16), u"max hum = %f"%(max(humidity6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 11*(max(var16)-min(var16))/13 + min(var16), u"moy hum = %f"%(moyenne(humidity6[s6:e6+1])), fontsize=7)
@@ -663,7 +675,8 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.subplot(321)
     ax11.plot(sent_at1, lum1, label='lum 1', color = 'tab:purple')
     ax11.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], lum1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at1)) != 0 :
+        ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], lum1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var11), u"min lum = %f"%(min(lum1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 12*(max(var11)-min(var11))/13 + min(var11), u"max lum = %f"%(max(lum1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 11*(max(var11)-min(var11))/13 + min(var11), u"moy lum = %f"%(moyenne(lum1[s1:e1+1])), fontsize=7)
@@ -675,7 +688,8 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.subplot(322)
     ax12.plot(sent_at2, lum2, label='lum 2', color = 'tab:purple')
     ax12.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], lum2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at2)) != 0 :
+        ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], lum2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var12), u"min lum = %f"%(min(lum2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 12*(max(var12)-min(var12))/13 + min(var12), u"max lum = %f"%(max(lum2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 11*(max(var12)-min(var12))/13 + min(var12), u"moy lum = %f"%(moyenne(lum2[s2:e2+1])), fontsize=7)
@@ -687,7 +701,8 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.subplot(323)
     ax13.plot(sent_at3, lum3, label='lum 3', color = 'tab:purple')
     ax13.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], lum3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at3)) != 0 :
+        ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], lum3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var13), u"min lum = %f"%(min(lum3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 12*(max(var13)-min(var13))/13 + min(var13), u"max lum = %f"%(max(lum3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 11*(max(var13)-min(var13))/13 + min(var13), u"moy lum = %f"%(moyenne(lum3[s3:e3+1])), fontsize=7)
@@ -699,7 +714,8 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.subplot(324)
     ax14.plot(sent_at4, lum4, label='lum 4', color = 'tab:purple')
     ax14.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], lum4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at4)) != 0 :
+        ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], lum4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var14), u"min lum = %f"%(min(lum4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 12*(max(var14)-min(var14))/13 + min(var14), u"max lum = %f"%(max(lum4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 11*(max(var14)-min(var14))/13 + min(var14), u"moy lum = %f"%(moyenne(lum4[s4:e4+1])), fontsize=7)
@@ -711,7 +727,8 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.subplot(325)
     ax15.plot(sent_at5, lum5, label='lum 5', color = 'tab:purple')
     ax15.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], lum5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at5)) != 0 :
+        ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], lum5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var15), u"min lum = %f"%(min(lum5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 12*(max(var15)-min(var15))/13 + min(var15), u"max lum = %f"%(max(lum5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 11*(max(var15)-min(var15))/13 + min(var15), u"moy lum = %f"%(moyenne(lum5[s5:e5+1])), fontsize=7)
@@ -723,7 +740,8 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.subplot(326)
     ax16.plot(sent_at6, lum6, label='lum 6', color = 'tab:purple')
     ax16.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], lum6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at6)) != 0 :
+        ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], lum6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var16), u"min lum = %f"%(min(lum6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 12*(max(var16)-min(var16))/13 + min(var16), u"max lum = %f"%(max(lum6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 11*(max(var16)-min(var16))/13 + min(var16), u"moy lum = %f"%(moyenne(lum6[s6:e6+1])), fontsize=7)
@@ -737,7 +755,8 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.subplot(321)
     ax11.plot(sent_at1, co21, label='CO2 1', color = 'tab:purple')
     ax11.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], co21[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at1)) != 0 :
+        ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], co21[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var11), u"min co2 = %f"%(min(co21[s1:e1+1])), fontsize=7)
     plt.text(start_date, 12*(max(var11)-min(var11))/13 + min(var11), u"max co2 = %f"%(max(co21[s1:e1+1])), fontsize=7)
     plt.text(start_date, 11*(max(var11)-min(var11))/13 + min(var11), u"moy co2 = %f"%(moyenne(co21[s1:e1+1])), fontsize=7)
@@ -749,7 +768,8 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.subplot(322)
     ax12.plot(sent_at2, co22, label='CO2 2', color = 'tab:purple')
     ax12.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], co22[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at2)) != 0 :
+        ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], co22[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var12), u"min co2 = %f"%(min(co22[s2:e2+1])), fontsize=7)
     plt.text(start_date, 12*(max(var12)-min(var12))/13 + min(var12), u"max co2 = %f"%(max(co22[s2:e2+1])), fontsize=7)
     plt.text(start_date, 11*(max(var12)-min(var12))/13 + min(var12), u"moy co2 = %f"%(moyenne(co22[s2:e2+1])), fontsize=7)
@@ -761,7 +781,8 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.subplot(323)
     ax13.plot(sent_at3, co23, label='CO2 3', color = 'tab:purple')
     ax13.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], co23[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at3)) != 0 :
+        ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], co23[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var13), u"min co2 = %f"%(min(co23[s3:e3+1])), fontsize=7)
     plt.text(start_date, 12*(max(var13)-min(var13))/13 + min(var13), u"max co2 = %f"%(max(co23[s3:e3+1])), fontsize=7)
     plt.text(start_date, 11*(max(var13)-min(var13))/13 + min(var13), u"moy co2 = %f"%(moyenne(co23[s3:e3+1])), fontsize=7)
@@ -773,7 +794,8 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.subplot(324)
     ax14.plot(sent_at4, co24, label='CO2 4', color = 'tab:purple')
     ax14.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], co24[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at4)) != 0 :
+        ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], co24[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var14), u"min co2 = %f"%(min(co24[s4:e4+1])), fontsize=7)
     plt.text(start_date, 12*(max(var14)-min(var14))/13 + min(var14), u"max co2 = %f"%(max(co24[s4:e4+1])), fontsize=7)
     plt.text(start_date, 11*(max(var14)-min(var14))/13 + min(var14), u"moy co2 = %f"%(moyenne(co24[s4:e4+1])), fontsize=7)
@@ -785,7 +807,8 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.subplot(325)
     ax15.plot(sent_at5, co25, label='CO2 5', color = 'tab:purple')
     ax15.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], co25[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at5)) != 0 :
+        ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], co25[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var15), u"min co2 = %f"%(min(co25[s5:e5+1])), fontsize=7)
     plt.text(start_date, 12*(max(var15)-min(var15))/13 + min(var15), u"max co2 = %f"%(max(co25[s5:e5+1])), fontsize=7)
     plt.text(start_date, 11*(max(var15)-min(var15))/13 + min(var15), u"moy co2 = %f"%(moyenne(co25[s5:e5+1])), fontsize=7)
@@ -797,7 +820,8 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.subplot(326)
     ax16.plot(sent_at6, co26, label='CO2 6', color = 'tab:purple')
     ax16.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], co26[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at6)) != 0 :
+        ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], co26[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var16), u"min co2 = %f"%(min(lum6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 12*(max(var16)-min(var16))/13 + min(var16), u"max co2 = %f"%(max(co26[s6:e6+1])), fontsize=7)
     plt.text(start_date, 11*(max(var16)-min(var16))/13 + min(var16), u"moy co2 = %f"%(moyenne(co26[s6:e6+1])), fontsize=7)
@@ -811,7 +835,8 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.subplot(321)
     ax11.plot(sent_at1, humidex1, label='humidex 1', color = 'tab:purple')
     ax11.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], humidex1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at1)) != 0 :
+        ax11.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], humidex1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var11), u"min humidex = %f"%(min(humidex1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 12*(max(var11)-min(var11))/13 + min(var11), u"max humidex = %f"%(max(humidex1[s1:e1+1])), fontsize=7)
     plt.text(start_date, 11*(max(var11)-min(var11))/13 + min(var11), u"moy humidex = %f"%(moyenne(humidex1[s1:e1+1])), fontsize=7)
@@ -823,7 +848,8 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.subplot(322)
     ax12.plot(sent_at2, humidex2, label='humidex 2', color = 'tab:purple')
     ax12.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], humidex2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at2)) != 0 :
+        ax12.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], humidex2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var12), u"min humidex = %f"%(min(humidex2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 12*(max(var12)-min(var12))/13 + min(var12), u"max humidex = %f"%(max(humidex2[s2:e2+1])), fontsize=7)
     plt.text(start_date, 11*(max(var12)-min(var12))/13 + min(var12), u"moy humidex = %f"%(moyenne(humidex2[s2:e2+1])), fontsize=7)
@@ -835,7 +861,8 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.subplot(323)
     ax13.plot(sent_at3, humidex3, label='humidex 3', color = 'tab:purple')
     ax13.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], humidex3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at3)) != 0 :
+        ax13.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], humidex3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var13), u"min humidex = %f"%(min(humidex3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 12*(max(var13)-min(var13))/13 + min(var13), u"max humidex = %f"%(max(humidex3[s3:e3+1])), fontsize=7)
     plt.text(start_date, 11*(max(var13)-min(var13))/13 + min(var13), u"moy humidex = %f"%(moyenne(humidex3[s3:e3+1])), fontsize=7)
@@ -847,7 +874,8 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.subplot(324)
     ax14.plot(sent_at4, humidex4, label='humidex 4', color = 'tab:purple')
     ax14.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], humidex4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at4)) != 0 :
+        ax14.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], humidex4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var14), u"min humidex = %f"%(min(humidex4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 12*(max(var14)-min(var14))/13 + min(var14), u"max humidex = %f"%(max(humidex4[s4:e4+1])), fontsize=7)
     plt.text(start_date, 11*(max(var14)-min(var14))/13 + min(var14), u"moy humidex = %f"%(moyenne(humidex4[s4:e4+1])), fontsize=7)
@@ -859,7 +887,8 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.subplot(325)
     ax15.plot(sent_at5, humidex5, label='humidex 5', color = 'tab:purple')
     ax15.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], humidex5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at5)) != 0 :
+        ax15.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], humidex5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var15), u"min humidex = %f"%(min(humidex5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 12*(max(var15)-min(var15))/13 + min(var15), u"max humidex = %f"%(max(humidex5[s5:e5+1])), fontsize=7)
     plt.text(start_date, 11*(max(var15)-min(var15))/13 + min(var15), u"moy humidex = %f"%(moyenne(humidex5[s5:e5+1])), fontsize=7)
@@ -871,7 +900,8 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.subplot(326)
     ax16.plot(sent_at6, humidex6, label='humidex 6', color = 'tab:purple')
     ax16.tick_params(axis='y',  labelcolor = 'tab:purple')
-    ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], humidex6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+    if len(anom(sent_at6)) != 0 :
+        ax16.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], humidex6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
     plt.text(start_date, max(var16), u"min humidex = %f"%(min(humidex6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 12*(max(var16)-min(var16))/13 + min(var16), u"max humidex = %f"%(max(humidex6[s6:e6+1])), fontsize=7)
     plt.text(start_date, 11*(max(var16)-min(var16))/13 + min(var16), u"moy humidex = %f"%(moyenne(humidex6[s6:e6+1])), fontsize=7)
@@ -894,7 +924,8 @@ if variable2 != None :
     if variable2 == 'Temperature' or variable2 == 'temperature' or variable2 == 'Température' or variable2 == 'température':
         ax21.plot(sent_at1, temperature1, label='tem 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
-        ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], temperature1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at1)) != 0 :
+            ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], temperature1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
         ax11.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min temp = %f"%(min(temperature1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max temp = %f"%(max(temperature1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy temp = %f"%(moyenne(temperature1[s1:e1+1])), fontsize=7)
@@ -905,7 +936,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax22.plot(sent_at2, temperature2, label='tem 2', color = 'tab:green')
         ax22.tick_params(axis='y', labelcolor = 'tab:green')
-        ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], temperature2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at2)) != 0 :
+            ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], temperature2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
         ax12.text(start_date, 7*(max(var12)-min(var12))/13 + min(var12), u"min temp = %f"%(min(temperature2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 6*(max(var12)-min(var12))/13 + min(var12), u"max temp = %f"%(max(temperature2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 5*(max(var12)-min(var12))/13 + min(var12), u"moy temp = %f"%(moyenne(temperature2[s2:e2+1])), fontsize=7)
@@ -916,7 +948,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax23.plot(sent_at3, temperature3, label='tem 3', color = 'tab:green')
         ax23.tick_params(axis='y', labelcolor = 'tab:green')
-        ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], temperature3[anom(sent_at1)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at3)) != 0 :
+            ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], temperature3[anom(sent_at1)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
         ax13.text(start_date, 7*(max(var13)-min(var13))/13 + min(var13), u"min temp = %f"%(min(temperature3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 6*(max(var13)-min(var13))/13 + min(var13), u"max temp = %f"%(max(temperature3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 5*(max(var13)-min(var13))/13 + min(var13), u"moy temp = %f"%(moyenne(temperature3[s3:e3+1])), fontsize=7)
@@ -927,7 +960,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax24.plot(sent_at4, temperature4, label='tem 4', color = 'tab:green')
         ax24.tick_params(axis='y', labelcolor = 'tab:green')
-        ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], temperature4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at4)) != 0 :
+            ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], temperature4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
         ax14.text(start_date, 7*(max(var14)-min(var14))/13 + min(var14), u"min temp = %f"%(min(temperature4[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 6*(max(var14)-min(var14))/13 + min(var14), u"max temp = %f"%(max(temperature4[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 5*(max(var14)-min(var14))/13 + min(var14), u"moy temp = %f"%(moyenne(temperature4[s4:e4+1])), fontsize=7)
@@ -938,7 +972,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax25.plot(sent_at5, temperature5, label='tem 5', color = 'tab:green')
         ax25.tick_params(axis='y', labelcolor = 'tab:green')
-        ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], temperature5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at5)) != 0 :
+            ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], temperature5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
         ax15.text(start_date, 7*(max(var15)-min(var15))/13 + min(var15), u"min temp = %f"%(min(temperature5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 6*(max(var15)-min(var15))/13 + min(var15), u"max temp = %f"%(max(temperature5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 5*(max(var15)-min(var15))/13 + min(var15), u"moy temp = %f"%(moyenne(temperature5[s5:e5+1])), fontsize=7)
@@ -949,7 +984,8 @@ if variable2 != None :
         ax15.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax26.plot(sent_at6, temperature6, label='tem 6', color = 'tab:green')
         ax26.tick_params(axis='y', labelcolor = 'tab:green')
-        ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], temperature6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at6)) != 0 :
+            ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], temperature6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
         ax16.text(start_date, 7*(max(var16)-min(var16))/13 + min(var16), u"min temp = %f"%(min(temperature6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 6*(max(var16)-min(var16))/13 + min(var16), u"max temp = %f"%(max(temperature6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 5*(max(var16)-min(var16))/13 + min(var16), u"moy temp = %f"%(moyenne(temperature6[s6:e6+1])), fontsize=7)
@@ -962,7 +998,8 @@ if variable2 != None :
     elif variable2 == 'bruit' or variable2 == 'Bruit':
         ax21.plot(sent_at1, noise1, label='bruit 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
-        ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], noise1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at1)) != 0 :
+            ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], noise1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
         ax11.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min bruit = %f"%(min(noise1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max bruit = %f"%(max(noise1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy bruit = %f"%(moyenne(noise1[s1:e1+1])), fontsize=7)
@@ -973,7 +1010,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax22.plot(sent_at2, noise2, label='bruit 2', color = 'tab:green')
         ax22.tick_params(axis='y', labelcolor = 'tab:green')
-        ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], noise2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at2)) != 0 :
+            ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], noise2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
         ax12.text(start_date, 7*(max(var12)-min(var12))/13 + min(var12), u"min bruit = %f"%(min(noise2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 6*(max(var12)-min(var12))/13 + min(var12), u"max bruit = %f"%(max(noise2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 5*(max(var12)-min(var12))/13 + min(var12), u"moy bruit = %f"%(moyenne(noise2[s2:e2+1])), fontsize=7)
@@ -984,7 +1022,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax23.plot(sent_at3, noise3, label='bruit 3', color = 'tab:green')
         ax23.tick_params(axis='y', labelcolor = 'tab:green')
-        ax23.plot(sent_at1[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], noise3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at3)) != 0 :
+            ax23.plot(sent_at1[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], noise3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
         ax13.text(start_date, 7*(max(var13)-min(var13))/13 + min(var13), u"min bruit = %f"%(min(noise3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 6*(max(var13)-min(var13))/13 + min(var13), u"max bruit = %f"%(max(noise3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 5*(max(var13)-min(var13))/13 + min(var13), u"moy bruit = %f"%(moyenne(noise3[s3:e3+1])), fontsize=7)
@@ -995,7 +1034,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax24.plot(sent_at4, noise4, label='bruit 4', color = 'tab:green')
         ax24.tick_params(axis='y', labelcolor = 'tab:green')
-        ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], noise4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at4)) != 0 :
+            ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], noise4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
         plt.text(start_date, 7*(max(var14)-min(var14))/13 + min(var14), u"min bruit = %f"%(min(noise4[s4:e4+1])), fontsize=7)
         plt.text(start_date, 6*(max(var14)-min(var14))/13 + min(var14), u"max bruit = %f"%(max(noise4[s4:e4+1])), fontsize=7)
         plt.text(start_date, 5*(max(var14)-min(var14))/13 + min(var14), u"moy bruit = %f"%(moyenne(noise4[s4:e4+1])), fontsize=7)
@@ -1006,7 +1046,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax25.plot(sent_at5, noise5, label='bruit 5', color = 'tab:green')
         ax25.tick_params(axis='y', labelcolor = 'tab:green')
-        ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], noise5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at5)) != 0 :
+            ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], noise5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
         ax15.text(start_date, 7*(max(var15)-min(var15))/13 + min(var15), u"min bruit = %f"%(min(noise5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 6*(max(var15)-min(var15))/13 + min(var15), u"max bruit = %f"%(max(noise5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 5*(max(var15)-min(var15))/13 + min(var15), u"moy bruit = %f"%(moyenne(noise5[s5:e5+1])), fontsize=7)
@@ -1017,7 +1058,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax26.plot(sent_at6, noise6, label='bruit 6', color = 'tab:green')
         ax26.tick_params(axis='y', labelcolor = 'tab:green')
-        ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], noise6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at6)) != 0 :
+            ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], noise6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
         ax16.text(start_date, 7*(max(var16)-min(var16))/13 + min(var16), u"min bruit = %f"%(min(noise6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 6*(max(var16)-min(var16))/13 + min(var16), u"max bruit = %f"%(max(noise6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 5*(max(var16)-min(var16))/13 + min(var16), u"moy bruit = %f"%(moyenne(noise6[s6:e6+1])), fontsize=7)
@@ -1030,7 +1072,8 @@ if variable2 != None :
     elif variable2 == 'Humidité' or variable2 == 'humidité' or variable2 == 'Humidite' or variable2 == 'humidite' :
         ax21.plot(sent_at1, humidity1, label='hum 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
-        ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], humidity1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at1)) != 0 :
+            ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], humidity1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
         ax11.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min hum = %f"%(min(humidity1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max hum = %f"%(max(humidity1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy hum = %f"%(moyenne(humidity1[s1:e1+1])), fontsize=7)
@@ -1041,7 +1084,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax22.plot(sent_at2, humidity2, label='hum 2', color = 'tab:green')
         ax22.tick_params(axis='y', labelcolor = 'tab:green')
-        ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], humidity2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at2)) != 0 :
+            ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], humidity2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
         ax12.text(start_date, 7*(max(var12)-min(var12))/13 + min(var12), u"min hum = %f"%(min(humidity2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 6*(max(var12)-min(var12))/13 + min(var12), u"max hum = %f"%(max(humidity2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 5*(max(var12)-min(var12))/13 + min(var12), u"moy hum = %f"%(moyenne(humidity2[s2:e2+1])), fontsize=7)
@@ -1052,7 +1096,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax23.plot(sent_at3, humidity3, label='hum 3', color = 'tab:green')
         ax23.tick_params(axis='y', labelcolor = 'tab:green')
-        ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], humidity3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at3)) != 0 :
+            ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], humidity3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
         ax13.text(start_date, 7*(max(var13)-min(var13))/13 + min(var13), u"min hum = %f"%(min(humidity3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 6*(max(var13)-min(var13))/13 + min(var13), u"max hum = %f"%(max(humidity3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 5*(max(var13)-min(var13))/13 + min(var13), u"moy hum = %f"%(moyenne(humidity3[s3:e3+1])), fontsize=7)
@@ -1063,7 +1108,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax24.plot(sent_at4, humidity4, label='hum 4', color = 'tab:green')
         ax24.tick_params(axis='y', labelcolor = 'tab:green')
-        ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], humidity4[anom(sent_at1)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at4)) != 0 :
+            ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], humidity4[anom(sent_at1)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
         ax14.text(start_date, 7*(max(var14)-min(var14))/13 + min(var14), u"min hum = %f"%(min(humidity4[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 6*(max(var14)-min(var14))/13 + min(var14), u"max hum = %f"%(max(humidity4[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 5*(max(var14)-min(var14))/13 + min(var14), u"moy hum = %f"%(moyenne(humidity4[s4:e4+1])), fontsize=7)
@@ -1074,7 +1120,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax25.plot(sent_at5, humidity5, label='hum 5', color = 'tab:green')
         ax25.tick_params(axis='y', labelcolor = 'tab:green')
-        ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], humidity5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at5)) != 0 :
+            ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], humidity5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
         ax15.text(start_date, 7*(max(var15)-min(var15))/13 + min(var15), u"min hum = %f"%(min(humidity5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 6*(max(var15)-min(var15))/13 + min(var15), u"max hum = %f"%(max(humidity5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 5*(max(var15)-min(var15))/13 + min(var15), u"moy hum = %f"%(moyenne(humidity5[s5:e5+1])), fontsize=7)
@@ -1085,7 +1132,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax26.plot(sent_at6, humidity6, label='hum 6', color = 'tab:green')
         ax26.tick_params(axis='y', labelcolor = 'tab:green')
-        ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], humidity6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at6)) != 0 :
+            ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], humidity6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
         ax16.text(start_date, 7*(max(var16)-min(var16))/13 + min(var16), u"min hum = %f"%(min(humidity6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 6*(max(var16)-min(var16))/13 + min(var16), u"max hum = %f"%(moyenne(humidity6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 5*(max(var16)-min(var16))/13 + min(var16), u"moy hum = %f"%(moyenne(humidity6[s6:e6+1])), fontsize=7)
@@ -1098,7 +1146,8 @@ if variable2 != None :
     elif variable2 == 'Lumière' or variable2 == 'lumière' or variable2 == 'Lumiere' or variable2 == 'lumiere' :
         ax21.plot(sent_at1, lum1, label='lum 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
-        ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], lum1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at1)) != 0 :
+            ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], lum1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
         ax11.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min lum = %f"%(min(lum1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max lum = %f"%(max(lum1[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy lum = %f"%(moyenne(lum1[s1:e1+1])), fontsize=7)
@@ -1109,7 +1158,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax22.plot(sent_at2, lum2, label='lum 2', color = 'tab:green')
         ax22.tick_params(axis='y', labelcolor = 'tab:green')
-        ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], lum2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at2)) != 0 :
+            ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], lum2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
         ax12.text(start_date, 7*(max(var12)-min(var12))/13 + min(var12), u"min lum = %f"%(min(lum2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 6*(max(var12)-min(var12))/13 + min(var12), u"max lum = %f"%(max(lum2[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 5*(max(var12)-min(var12))/13 + min(var12), u"moy lum = %f"%(moyenne(lum2[s2:e2+1])), fontsize=7)
@@ -1120,7 +1170,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax23.plot(sent_at3, lum3, label='lum 3', color = 'tab:green')
         ax23.tick_params(axis='y', labelcolor = 'tab:green')
-        ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], lum3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at3)) != 0 :
+            ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], lum3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
         ax13.text(start_date, 7*(max(var13)-min(var13))/13 + min(var13), u"min lum = %f"%(min(lum3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 6*(max(var13)-min(var13))/13 + min(var13), u"max lum = %f"%(max(lum3[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 5*(max(var13)-min(var13))/13 + min(var13), u"moy lum = %f"%(moyenne(lum3[s3:e3+1])), fontsize=7)
@@ -1131,7 +1182,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax24.plot(sent_at4, lum4, label='lum 4', color = 'tab:green')
         ax24.tick_params(axis='y', labelcolor = 'tab:green')
-        ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], lum4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at4)) != 0 :
+            ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], lum4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
         ax14.text(start_date, 7*(max(var14)-min(var14))/13 + min(var14), u"min lum = %f"%(min(lum4[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 6*(max(var14)-min(var14))/13 + min(var14), u"max lum = %f"%(max(lum4[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 5*(max(var14)-min(var14))/13 + min(var14), u"moy lum = %f"%(moyenne(lum4[s4:e4+1])), fontsize=7)
@@ -1142,7 +1194,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax25.plot(sent_at5, lum5, label='lum 5', color = 'tab:green')
         ax25.tick_params(axis='y', labelcolor = 'tab:green')
-        ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], lum5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at5)) != 0 :
+            ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], lum5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
         ax15.text(start_date, 7*(max(var15)-min(var15))/13 + min(var15), u"min lum = %f"%(min(lum5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 6*(max(var15)-min(var15))/13 + min(var15), u"max lum = %f"%(max(lum5[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 5*(max(var15)-min(var15))/13 + min(var15), u"moy lum = %f"%(moyenne(lum5[s5:e5+1])), fontsize=7)
@@ -1153,7 +1206,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax26.plot(sent_at6, lum6, label='lum 6', color = 'tab:green')
         ax26.tick_params(axis='y', labelcolor = 'tab:green')
-        ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], lum6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at6)) != 0 :
+            ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], lum6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
         ax16.text(start_date, 7*(max(var16)-min(var16))/13 + min(var16), u"min lum = %f"%(min(lum6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 6*(max(var16)-min(var16))/13 + min(var16), u"max lum = %f"%(moyenne(lum6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 5*(max(var16)-min(var16))/13 + min(var16), u"moy lum = %f"%(moyenne(lum6[s6:e6+1])), fontsize=7)
@@ -1166,7 +1220,8 @@ if variable2 != None :
     elif variable2 == 'CO2' or variable2 == 'Co2' or variable2 == 'co2':
         ax21.plot(sent_at1, co21, label='co2 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
-        ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], co21[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at1)) != 0 :
+            ax21.plot(sent_at1[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], co21[anom(sent_at1)[0]:anom(sent_at1)[-1]+2], color = 'tab:red')
         ax11.text(start_date, 7*(max(var11)-min(var11))/13 + min(var11), u"min co2 = %f"%(min(co21[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 6*(max(var11)-min(var11))/13 + min(var11), u"max co2 = %f"%(max(co21[s1:e1+1])), fontsize=7)
         ax11.text(start_date, 5*(max(var11)-min(var11))/13 + min(var11), u"moy co2 = %f"%(moyenne(co21[s1:e1+1])), fontsize=7)
@@ -1177,7 +1232,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax22.plot(sent_at2, co22, label='co2 2', color = 'tab:green')
         ax22.tick_params(axis='y', labelcolor = 'tab:green')
-        ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], co22[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at2)) != 0 :
+            ax22.plot(sent_at2[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], co22[anom(sent_at2)[0]:anom(sent_at2)[-1]+2], color = 'tab:red')
         ax12.text(start_date, 7*(max(var12)-min(var12))/13 + min(var12), u"min co2 = %f"%(min(co22[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 6*(max(var12)-min(var12))/13 + min(var12), u"max co2 = %f"%(max(co22[s2:e2+1])), fontsize=7)
         ax12.text(start_date, 5*(max(var12)-min(var12))/13 + min(var12), u"moy co2 = %f"%(moyenne(co22[s2:e2+1])), fontsize=7)
@@ -1188,7 +1244,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax23.plot(sent_at3, co23, label='co2 3', color = 'tab:green')
         ax23.tick_params(axis='y', labelcolor = 'tab:green')
-        ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], co23[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at3)) != 0 :
+            ax23.plot(sent_at3[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], co23[anom(sent_at3)[0]:anom(sent_at3)[-1]+2], color = 'tab:red')
         ax13.text(start_date, 7*(max(var13)-min(var13))/13 + min(var13), u"min co2 = %f"%(min(co23[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 6*(max(var13)-min(var13))/13 + min(var13), u"max co2 = %f"%(max(co23[s3:e3+1])), fontsize=7)
         ax13.text(start_date, 5*(max(var13)-min(var13))/13 + min(var13), u"moy co2 = %f"%(moyenne(co23[s3:e3+1])), fontsize=7)
@@ -1199,7 +1256,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax24.plot(sent_at4, co24, label='co2 4', color = 'tab:green')
         ax24.tick_params(axis='y', labelcolor = 'tab:green')
-        ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], co24[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at4)) != 0 :
+            ax24.plot(sent_at4[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], co24[anom(sent_at4)[0]:anom(sent_at4)[-1]+2], color = 'tab:red')
         ax14.text(start_date, 7*(max(var14)-min(var14))/13 + min(var14), u"min co2 = %f"%(min(co24[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 6*(max(var14)-min(var14))/13 + min(var14), u"max co2 = %f"%(max(co24[s4:e4+1])), fontsize=7)
         ax14.text(start_date, 5*(max(var14)-min(var14))/13 + min(var14), u"moy co2 = %f"%(moyenne(co24[s4:e4+1])), fontsize=7)
@@ -1210,7 +1268,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax25.plot(sent_at5, co25, label='co2 5', color = 'tab:green')
         ax25.tick_params(axis='y', labelcolor = 'tab:green')
-        ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], co25[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at5)) != 0 :
+            ax25.plot(sent_at5[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], co25[anom(sent_at5)[0]:anom(sent_at5)[-1]+2], color = 'tab:red')
         ax15.text(start_date, 7*(max(var15)-min(var15))/13 + min(var15), u"min co2 = %f"%(min(co25[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 6*(max(var15)-min(var15))/13 + min(var15), u"max co2 = %f"%(max(co25[s5:e5+1])), fontsize=7)
         ax15.text(start_date, 5*(max(var15)-min(var15))/13 + min(var15), u"moy co2 = %f"%(moyenne(co25[s5:e5+1])), fontsize=7)
@@ -1221,7 +1280,8 @@ if variable2 != None :
         plt.legend(bbox_to_anchor =(0, 1.15), ncol = 2)
         ax26.plot(sent_at6, co26, label='co2 6', color = 'tab:green')
         ax26.tick_params(axis='y', labelcolor = 'tab:green')
-        ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], co26[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
+        if len(anom(sent_at6)) != 0 :
+            ax26.plot(sent_at6[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], co26[anom(sent_at6)[0]:anom(sent_at6)[-1]+2], color = 'tab:red')
         ax16.text(start_date, 7*(max(var16)-min(var16))/13 + min(var16), u"min co2 = %f"%(min(co26[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 6*(max(var16)-min(var16))/13 + min(var16), u"max co2 = %f"%(moyenne(co26[s6:e6+1])), fontsize=7)
         ax16.text(start_date, 5*(max(var16)-min(var16))/13 + min(var16), u"moy co2 = %f"%(moyenne(co26[s6:e6+1])), fontsize=7)
