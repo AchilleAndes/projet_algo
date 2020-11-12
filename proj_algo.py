@@ -1,7 +1,6 @@
 ##importation
 import pandas as pd
 import datetime
-import numpy as np
 import matplotlib.pyplot as plt
 import statistics
 from math import *
