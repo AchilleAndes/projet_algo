@@ -211,7 +211,7 @@ for i in range (1,len(doc)):
 
 ## inputs
 
-print("Ce programme affiche les courbes pour chaque capteur d'une ou deux variables en fonction du temps entre une date de début et une date de fin que vous définirez, les variables possibles sont : température, bruit, lumière, humidité, co2 et humidex")
+print("Ce programme affiche les courbes pour chaque capteur d'une ou deux variables en fonction du temps entre une date de début et une date de fin que vous définirez, les variables possibles sont : température, bruit, lumière, humidité, co2 et humidex. De plus si une anomalie est détectée elle sera affiché en rouge sur les courbes")
 
 debut = str(input('quelle date de début ? (AAAA-MM-JJ)'))
 fin = str(input('quelle date de fin ? (AAAA-MM-JJ)'))
