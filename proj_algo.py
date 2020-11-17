@@ -211,10 +211,12 @@ for i in range (1,len(doc)):
 
 ## inputs
 
-debut = str(input('date de début ? (AAAA-MM-JJ)'))
-fin = str(input('date de fin ? (AAAA-MM-JJ)'))
+print("Ce programme affiche les courbes pour chaque capteur d'une ou deux variables en fonction du temps entre une date de début et une date de fin que vous définirez, les variables possibles sont : température, bruit, lumière, humidité, co2 et humidex")
+
+debut = str(input('quelle date de début ? (AAAA-MM-JJ)'))
+fin = str(input('quelle date de fin ? (AAAA-MM-JJ)'))
 variable1 = str(input('première variable ?'))
-boole = str(input("afficher une seconde variable ? (oui/non)"))
+boole = str(input("voulez-vous afficher une seconde variable ? (oui/non)"))
 if boole == "oui" or boole == "Oui" :
     variable2 = str(input('seconde variable ?'))
 else :
