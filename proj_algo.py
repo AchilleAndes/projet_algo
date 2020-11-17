@@ -513,7 +513,6 @@ if variable1 == 'Temperature' or variable1 == 'temperature' or variable1 == 'Tem
     plt.text(start_date, 9*(max(var16)-min(var16))/13 + min(var16), u"EcTyp temp = %f"%(ecartType(temperature6[s6:e6+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 6')
-    plt.show()
 elif variable1 == 'bruit' or variable1 == 'Bruit':
     ax11 = plt.subplot(321)
     plt.subplot(321)
@@ -593,7 +592,6 @@ elif variable1 == 'bruit' or variable1 == 'Bruit':
     plt.text(start_date, 9*(max(var16)-min(var16))/13 + min(var16), u"EcTyp bruit = %f"%(ecartType(noise6[s6:e6+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 6')
-    plt.show()
 elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humidite' or variable1 == 'humidite' :
     ax11 = plt.subplot(321)
     plt.subplot(321)
@@ -673,7 +671,6 @@ elif variable1 == 'Humidité' or variable1 == 'humidité' or variable1 == 'Humid
     plt.text(start_date, 9*(max(var16)-min(var16))/13 + min(var16), u"EcTyp hum = %f"%(ecartType(humidity6[s6:e6+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 6')
-    plt.show()
 elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere' or variable1 == 'lumiere' :
     ax11 = plt.subplot(321)
     plt.subplot(321)
@@ -753,7 +750,6 @@ elif variable1 == 'Lumière' or variable1 == 'lumière' or variable1 == 'Lumiere
     plt.text(start_date, 9*(max(var16)-min(var16))/13 + min(var16), u"EcTyp lum = %f"%(ecartType(lum6[s6:e6+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 6')
-    plt.show()
 elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     ax11 = plt.subplot(321)
     plt.subplot(321)
@@ -833,7 +829,6 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.text(start_date, 9*(max(var16)-min(var16))/13 + min(var16), u"EcTyp co2 = %f"%(ecartType(co26[s6:e6+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 6')
-    plt.show()
 elif variable1 == 'humidex' or variable1 == 'Humidex':
     ax11 = plt.subplot(321)
     plt.subplot(321)
@@ -913,7 +908,6 @@ elif variable1 == 'humidex' or variable1 == 'Humidex':
     plt.text(start_date, 9*(max(var16)-min(var16))/13 + min(var16), u"EcTyp humidex = %f"%(ecartType(humidex6[s6:e6+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 6')
-    plt.show()
 else :
     print ("erreur d'entrée de variable1")
 
@@ -992,7 +986,6 @@ if variable2 != None :
         ax16.text(start_date, 3*(max(var16)-min(var16))/13 + min(var16), u"EcTyp temp = %f"%(ecartType(temperature6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, (max(var16)-min(var16))/13 + min(var16), u"coef corr = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.show()
     elif variable2 == 'bruit' or variable2 == 'Bruit':
         ax21.plot(sent_at1, noise1, label='bruit 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
@@ -1060,7 +1053,6 @@ if variable2 != None :
         ax16.text(start_date, 3*(max(var16)-min(var16))/13 + min(var16), u"EcTyp bruit = %f"%(ecartType(noise6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, (max(var16)-min(var16))/13 + min(var16), u"coef corr = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.show()
     elif variable2 == 'Humidité' or variable2 == 'humidité' or variable2 == 'Humidite' or variable2 == 'humidite' :
         ax21.plot(sent_at1, humidity1, label='hum 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
@@ -1128,7 +1120,6 @@ if variable2 != None :
         ax16.text(start_date, 3*(max(var16)-min(var16))/13 + min(var16), u"EcTyp hum = %f"%(ecartType(humidity6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, (max(var16)-min(var16))/13 + min(var16), u"coef corr = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.show()
     elif variable2 == 'Lumière' or variable2 == 'lumière' or variable2 == 'Lumiere' or variable2 == 'lumiere' :
         ax21.plot(sent_at1, lum1, label='lum 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
@@ -1196,7 +1187,6 @@ if variable2 != None :
         ax16.text(start_date, 3*(max(var16)-min(var16))/13 + min(var16), u"EcTyp lum = %f"%(ecartType(lum6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, (max(var16)-min(var16))/13 + min(var16), u"coef corr = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.show()
     elif variable2 == 'CO2' or variable2 == 'Co2' or variable2 == 'co2':
         ax21.plot(sent_at1, co21, label='co2 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
@@ -1264,7 +1254,6 @@ if variable2 != None :
         ax16.text(start_date, 3*(max(var16)-min(var16))/13 + min(var16), u"EcTyp co2 = %f"%(ecartType(co26[s6:e6+1])), fontsize=7)
         ax16.text(start_date, (max(var16)-min(var16))/13 + min(var16), u"coef corr = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.show()
     elif variable2 == 'humidex' or variable2 == 'Humidex':
         ax21.plot(sent_at1, humidex1, label='humidex 1', color = 'tab:green')
         ax21.tick_params(axis='y', labelcolor = 'tab:green')
@@ -1332,7 +1321,6 @@ if variable2 != None :
         ax16.text(start_date, 3*(max(var16)-min(var16))/13 + min(var16), u"EcTyp humidex = %f"%(ecartType(humidex6[s6:e6+1])), fontsize=7)
         ax16.text(start_date, (max(var16)-min(var16))/13 + min(var16), u"coef corr = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]), fontsize=7)
         plt.xlim(start_date,end_date)
-        plt.show()
     else :
         print ("erreur d'entrée de variable2")
 
@@ -1343,3 +1331,5 @@ if variable2 != None:
     print(u"capteur 4 : coefficient de corrélation = %f"%coefCorr(var14[s4:e4+1],var24[s4:e4+1]))
     print(u"capteur 5 : coefficient de corrélation = %f"%coefCorr(var15[s5:e5+1],var25[s5:e5+1]))
     print(u"capteur 6 : coefficient de corrélation = %f"%coefCorr(var16[s6:e6+1],var26[s6:e6+1]))
+
+plt.show()
