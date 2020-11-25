@@ -5,7 +5,7 @@ import datetime
 import matplotlib.pyplot as plt
 import statistics
 from math import *
-doc = pd.read_csv(r"C:\Users\aachi\Desktop\projet_algo\post-32566-EIVP_KM.csv", sep = ";", header = None)
+doc = pd.read_csv(r"C:\Users\aachi\Desktop\cours\projet_algo\post-32566-EIVP_KM.csv", sep = ";", header = None)
 
 ##fonctions valeurs statistique
 
@@ -766,7 +766,7 @@ elif variable1 == 'CO2' or variable1 == 'Co2' or variable1 == 'co2':
     plt.text(start_date, 9*(max(var11)-min(var11))/13 + min(var11), u"EcTyp co2 = %f"%(ecartType(co21[s1:e1+1])), fontsize=7)
     plt.xlim(start_date,end_date)
     plt.title('capteur 1')
-    ax2 = plt.subplot(322)
+    ax12 = plt.subplot(322)
     plt.subplot(322)
     ax12.plot(sent_at2, co22, label='CO2 2', color = 'tab:purple')
     ax12.tick_params(axis='y',  labelcolor = 'tab:purple')
